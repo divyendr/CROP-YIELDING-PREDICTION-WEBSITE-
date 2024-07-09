@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Yield Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Crop Yield Prediction</h1>
+    </header>
+    <main>
+        <section id="inputSection">
+            <h2>Enter Crop Details</h2>
+            <form id="cropForm">
+                <label for="cropName">Crop Name:</label>
+                <input type="text" id="cropName" name="cropName" required><br><br>
+                
+                <label for="areaSize">Crop Area Size (acres):</label>
+                <input type="number" id="areaSize" name="areaSize" min="1" required><br><br>
+                
+                <label for="soilFertility">Soil Fertility:</label>
+                <select id="soilFertility" name="soilFertility" required>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select><br><br>
+                
+                <label for="plantHealth">Plant Health:</label>
+                <select id="plantHealth" name="plantHealth" required>
+                    <option value="poor">Poor</option>
+                    <option value="fair">Fair</option>
+                    <option value="good">Good</option>
+                </select><br><br>
+                
+                <button type="submit">Predict Yield</button>
+            </form>
+        </section>
+        
+        <section id="outputSection" style="display: none;">
+            <h2>Predicted Yield</h2>
+            <p id="yieldResult"></p>
+        </section>
+    </main>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
