@@ -1,5 +1,5 @@
 const cropsData = {
-  {
+  
   "crops": [
     {
       "name": "Wheat",
@@ -112,7 +112,7 @@ const cropsData = {
         {"soilFertility": "high", "plantHealth": "fair", "yieldPerAcre":30}]
 	}
 
-};
+]};
 document.getElementById('cropForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -142,7 +142,7 @@ let predictedYield = null;
 
 const crop = cropsData.crops.find(c => c.name === cropName);
 if (crop) {
-  const yieldPrediction = crop.yields.find(y => y.soilFertility === soilFertility && y.plantHealth === plantHealth);
+  const yieldPrediction = crop.data.find(y => y.soilFertility === soilFertility && y.plantHealth === plantHealth);
   if (yieldPrediction) {
     predictedYield = yieldPrediction.yieldPerAcre;
   }
